@@ -9,8 +9,8 @@ export default function Header() {
   const isLogin = useAuthStore((state) => state.isLogin);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchParams] = useSearchParams();
-  const search = searchParams.get("search") || "null" ;
-  const [keyword, setKeyword] = useState(search);
+  const search = searchParams.get("search") || "null";
+  const [keyword, setKeyword] = useState("");
 
   const handleSearch = () => {
     navigate("/posts?search=" + keyword) // 검색하면 모든 쿼리스트링 날리기
