@@ -4,7 +4,8 @@ import { useNavigate } from "react-router";
 export default function Login() {
   const navigate = useNavigate();
   const handleKakaoLogin = () => {
-    window.location.href = import.meta.env.VITE_API_URL;  // http://localhost:4000 /auth/kakao
+    window.location.href = "http://localhost:4000/auth/kakao";  
+    //배포시  import.meta.env.VITE_API_URL 
   };
   return (
     <div className="min-h-[calc(100vh-64px)] flex items-center justify-center px-4">

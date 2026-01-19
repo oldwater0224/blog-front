@@ -63,7 +63,7 @@ export default function PostRead() {
             <div className="flex gap-2">
               <button
                 className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                onClick={() => navigate(`/edit${post._id}`)}
+                onClick={() => navigate(`/edit/${post._id}`)}
               >
                 <Pencil className="w-4 h-4" />
                 Edit
@@ -135,7 +135,7 @@ export default function PostRead() {
                   Cancel
                 </button>
                 <button
-                  onClick={() => deletePost}
+                  onClick={() => deletePost()}
                   className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
                 >
                   Delete

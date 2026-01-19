@@ -131,7 +131,7 @@ export default function PostCreate() {
         });
         if (status === 200) {
           alert("Post updated!");
-          navigate("/post" + post._id);
+          navigate("/post/" + post._id);
         }
       }
         else{ // 없으면 등록 모드
@@ -309,7 +309,7 @@ export default function PostCreate() {
           <button
             type="button"
             className="px-6 py-2.5 bg-slate-700 text-white font-medium rounded-lg hover:bg-slate-600 transition-colors"
-            onClick={() => navigate("-1")} // 이전 페이지로 이동
+            onClick={() => navigate(-1)} // 이전 페이지로 이동
           >
             Cancel
           </button>
