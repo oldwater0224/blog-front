@@ -51,10 +51,10 @@ export const fetchPosts = async ({ request }: LoaderFunctionArgs) => {
     const search = url.searchParams.get("search") ?? "";
 
     // 쿼리스트링 만들기
-    if (sort !== "") query += `sort${sort}`;
-    if (category !== "") query += `&category${category}`;
-    if (page !== "") query += `&page${page}`;
-    if (search !== "") query += `&search${search}`;
+    if (sort !== "") query += `sort=${sort}`;
+    if (category !== "") query += `&category=${category}`;
+    if (page !== "") query += `&page=${page}`;
+    if (search !== "") query += `&search=${search}`;
 
     // 데이터 불러오기
     const { data } = await axiosInstance.get(`/posts?${query}`);

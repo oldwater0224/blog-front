@@ -57,7 +57,7 @@ export default function Posts() {
               <option value={"Travel"}>Travel</option>
               <option value={"Business"}>Business</option>
               <option value={"Economy"}>Economy</option>
-              <option>Sports</option>
+              <option value={"Sports"}>Sports</option>
             </select>
           </div>
           {/* Latest */}
