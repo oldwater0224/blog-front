@@ -4,8 +4,7 @@ import { useNavigate } from "react-router";
 export default function Login() {
   const navigate = useNavigate();
   const handleKakaoLogin = () => {
-    window.location.href = "http://localhost:4000/auth/kakao";  
-    //배포시  import.meta.env.VITE_API_URL 
+    window.location.href = import.meta.env.VITE_API_URL; //  "http://localhost:4000"
   };
   return (
     <div className="min-h-[calc(100vh-64px)] flex items-center justify-center px-4">
@@ -40,8 +39,10 @@ export default function Login() {
             </div>
 
             {/* 카카오 로그인 버튼 */}
-            <button className="w-full flex items-center justify-center gap-2 bg-[#FEE500] text-[#000000] py-3 rounded-lg hover:bg-[#FDD800] transition-colors font-medium"
-            onClick={handleKakaoLogin}>
+            <button
+              className="w-full flex items-center justify-center gap-2 bg-[#FEE500] text-[#000000] py-3 rounded-lg hover:bg-[#FDD800] transition-colors font-medium"
+              onClick={handleKakaoLogin}
+            >
               <img
                 src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_small.png"
                 alt="Kakao Logo"
@@ -63,8 +64,10 @@ export default function Login() {
             </div>
 
             {/* 회원가입 버튼 */}
-            <button className="w-full flex items-center justify-center gap-2 bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-600 transition-colors font-medium"
-            onClick={()=> navigate("/auth/signup")}>
+            <button
+              className="w-full flex items-center justify-center gap-2 bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-600 transition-colors font-medium"
+              onClick={() => navigate("/auth/signup")}
+            >
               Create an account
             </button>
           </div>

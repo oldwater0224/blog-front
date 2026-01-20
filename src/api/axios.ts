@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000" , //배포시 import.meta.env.VITE_API_URL
+  baseURL:  import.meta.env.VITE_API_URL ,  // "http://localhost:4000"
   withCredentials: true, // 쿠키 기반 인증에서는 반드시 필요한 속성 , true 여야만 요청.
 });
 
